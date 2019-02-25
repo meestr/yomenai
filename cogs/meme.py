@@ -12,8 +12,8 @@ class MemeMaker(commands.Cog):
     async def meme(self, ctx, id, *args):
         async with aiohttp.request(method="POST", url="https://api.imgflip.com/caption_image", params={
             "template_id": id,
-            "username": "meestr",
-            "password": "yugignuf",
+            "username": ""
+            "password": "",
             "text0": args[0],
             "text1": args[1]
         },) as response:
