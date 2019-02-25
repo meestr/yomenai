@@ -136,6 +136,7 @@ class Other(commands.Cog):
                 return
         await ctx.send(
             embed=await macro.img(
+                desc=f"**RGB**: {args[0]} {args[1]} {args[2]}\n**HEX**: {'#%02x%02x%02x' % (args[0],args[1],args[2])}",
                 url=f"https://ice-creme.de/randcolor/?r={args[0]}&g={args[1]}&b={args[2]}"
             )
         )
@@ -144,7 +145,8 @@ class Other(commands.Cog):
         r = random.randint(1,255);g = random.randint(1,255);b = random.randint(1,255)
         await ctx.send(
             embed=await macro.img(
-                url=f"https://ice-creme.de/randcolor/?r={r)}&g={g}&b={b}"
+                desc=f"**RGB**: {r} {g} {b}\n**HEX**: {'#%02x%02x%02x' % (r,g,b)}",
+                url=f"https://ice-creme.de/randcolor/?r={r}&g={g}&b={b}"
             )
         )
     @commands.command(name="character")
