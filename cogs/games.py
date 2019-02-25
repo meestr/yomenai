@@ -12,7 +12,7 @@ class Games(commands.Cog):
     async def apex(self, ctx, username:str, platform:str):
         platform = platform.lower()
         try:
-            async with aiohttp.ClientSession(headers={'TRN-Api-Key': '7576ed9c-80b2-416f-82f4-5c88d06ad76d'}) as cs:
+            async with aiohttp.ClientSession(headers={'TRN-Api-Key': ''}) as cs:
                 platform = {"xbl": '1', 'psn': "2", "pc": "5"}.get(platform)
                 async with cs.get(f"https://public-api.tracker.gg/apex/v1/standard/profile/{platform}/{username}") as r:
                     re = await r.json()
@@ -51,7 +51,7 @@ class Games(commands.Cog):
     @commands.command(name="fortnite")
     async def fortnite(self, ctx, username:str):
         try:
-            async with aiohttp.ClientSession(headers={"TRN-Api-Key": "815be3c0-3c39-4465-a031-2d35d6887c2a"}) as cs:
+            async with aiohttp.ClientSession(headers={"TRN-Api-Key": ""}) as cs:
                 async with cs.get(f"https://api.fortnitetracker.com/v1/profile/pc/{username}") as r:
                     re = await r.json()
                     await ctx.send(embed=await macro.msg(
@@ -72,7 +72,7 @@ class Games(commands.Cog):
             )
     @commands.command(name="fortnite-shop")
     async def shop(self, ctx):
-        async with aiohttp.ClientSession(headers={"TRN-Api-Key": "815be3c0-3c39-4465-a031-2d35d6887c2a"}) as cs:
+        async with aiohttp.ClientSession(headers={"TRN-Api-Key": ""}) as cs:
             async with cs.get(f"https://api.fortnitetracker.com/v1/store") as r:
                 re = await r.json()
                 await ctx.send(
