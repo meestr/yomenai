@@ -1,0 +1,2 @@
+# yomenai
+discord botto ;D
