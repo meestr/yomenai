@@ -10,7 +10,7 @@ import logging
 class DiscordBotsOrgAPI(commands.Cog):
     def __init__(self, bot:commands.Bot):
         self.bot = bot
-        self.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUwMzk2MjM5NDEyOTU5NjQyNiIsImJvdCI6dHJ1ZSwiaWF0IjoxNTUxMDA1MTE2fQ.PXQvQ07beC33FyhARHiAwJIy4TECPAWZPboZM4WN2_A'  #  set this to your DBL token
+        self.token = ''  #  set this to your DBL token
         self.dblpy = dbl.Client(self.bot, self.token)
         self.bot.loop.create_task(self.update_stats())
 
