@@ -1,3 +1,4 @@
+[![Discord Bots](https://discordbots.org/api/widget/503962394129596426.svg)](https://discordbots.org/bot/503962394129596426)
 # Yomenai!
 ## A very good Discord bot(that you should get c;)
 
